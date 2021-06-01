@@ -1,0 +1,181 @@
+/**
+**|| ---------- LOADING ANIMATIONS ----------- ||
+*/
+
+@keyframes onload-title {
+  0% {
+    transform: translateY(-100vh) rotate(-45deg);
+  }
+  40% {
+  }
+  55% {
+    transform: translateY(0) rotate(20deg);
+  }
+
+  70% {
+    transform: translateY(-2rem) rotate(-20deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(1rem) rotate(-10deg);
+  }
+  95% {
+    transform: translateY(-1rem) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+}
+
+@keyframes onload-shadow {
+  from {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaling-page {
+  0% {
+    opacity: 0;
+    transform: scale(0) translate(-50%, -50%);
+    border-radius: 100%;
+    width: 1080px;
+    height: 1080px;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  99% {
+    border-radius: 100%;
+    transform: scale(0.9) translate(-50%, -50%);
+    width: 1920px;
+    height: 1920px;
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes showUp {
+  from {
+    // opacity: 0;
+    transform: translateX(-200vh);
+  }
+
+  to {
+    // opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/**
+**|| --------- NAVIGATION --------- ||
+*/
+
+@keyframes linkToRight {
+  from {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(105%);
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+    transform: translateX(-105%);
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes linkToLeft {
+  from {
+    transform: translateX(-105%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/**
+**|| -------- SECTION SKILLS -------- ||
+*/
+
+
+@keyframes circlesIntro {
+  0% {
+    opacity: 0;
+    transform: translateY(60rem) scale(3);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/**
+**|| ---------- SKILLS IN PROGRESS --------- ||
+*/
+
+@keyframes progressbar {
+  from {
+    max-width: 0%;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeUpRight {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, -50%);
+  }
+
+  50% {
+    
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, -50%)
+  }
+}

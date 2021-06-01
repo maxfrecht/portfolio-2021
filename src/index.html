@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio 2021</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+      
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="brand">
+            <a href="./index.html">
+              <h1><img src="./img/logo.svg" />Maxime <span>Freychet</span></h1>
+            </a>
+          </div>
+          <button><span class="material-icons burger">menu</span></button>
+          <ul>
+            <li><a class="nav-link" href="#home">Accueil</a></li>
+            <li><a class="nav-link" href="#who">Qui suis-je ?</a></li>
+            <li><a class="nav-link" href="#realisation">Réalisations</a></li>
+            <li><a class="nav-link" href="">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="contact">
+      <div class="content">
+        <button><span class="material-icons" >close</span></button>
+        <h2>Me Contacter</h2>
+        <ul>
+          <img src="./img/profil-in.jpeg" alt="">
+          <li><a href="#">06 12 80 24 36</a></li>
+          <li><a href="#" id="mail">max.frecht@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/maxfreych/" target="_blank" id="in"><img class="icon" src="./img/Orion_linkedin.svg" alt=""> /maxfreycht</a></li>
+          <li><a href="https://github.com/maxfrecht" target="_blank" id="in"><img class="icon" src="./img/Orion_github.svg" alt=""> /maxfrecht</a></li>
+          <!-- <li><a href="#">13 rue José Frappa<br>42000<br>Saint-étienne</a></li> -->
+        </ul>
+      </div>
+    </div>
+    <main>
+      <div class="cube">
+        <section class="front home">
+          <section class="home__intro">
+            <img class="home__intro-bg-face" src="./img/blueface.svg" />
+            <div class="container">
+              <div class="home__intro-description col-8">
+                <h2>Fullstack Developer</h2>
+                <p>
+                  Accro à l’auto-formation, curieux et fasciné par les métiers
+                  du web, j’ai décidé de suivre une formation d’un an portant
+                  sur le développement d’application web et mobile. En
+                  parallèle, je suis les cours à distance proposés par Dyma.fr
+                  afin de maîtriser les technologies les plus prometteuses de ce
+                  domaine.
+                </p>
+                <a class="btn" href="./img/CV_maxime_freychet_developpeur_web.pdf" class="btn btn--download" download>Télécharger mon CV</a>
+
+              </div>
+              <div class="home__intro-illustration col-4">
+                <div class="circle circle--purple"></div>
+                <div class="circle circle--yellow"></div>
+                <div class="circle circle--green"></div>
+                <div class="circle circle--blue"></div>
+              </div>
+            </div>
+          </section>
+          <section class="home__skills">
+            <div class="container">
+              <h2>What i use for now</h2>
+              <div class="skills">
+                <div class="skill">
+                  <h3>Css / Sass</h3>
+                  <p>
+                    css preprocessor to boost productivity. Easier to read and
+                    to organize than css
+                  </p>
+                </div>
+                <div class="skill">
+                  <h3>JavaScript / TypeScript</h3>
+                  <p>
+                    Languages of the web. Typescript provides fixes before
+                    running code
+                  </p>
+                </div>
+                <div class="skill">
+                  <h3>MySql</h3>
+                  <p>
+                    MySQL Database Service is a fully managed database service.
+                  </p>
+                </div>
+                <div class="skill">
+                  <h3>Parcel / Webpack</h3>
+                  <p>
+                    Tools to build fasts and powerfulls apps with organized
+                    code. Allow me to use preloaders and postloaders
+                  </p>
+                </div>
+                <div class="skill">
+                  <h3>PHP (7.4 - 8)</h3>
+                  <p>Back-end language used by lots of companies</p>
+                </div>
+                <div class="skill">
+                  <h3>Figma</h3>
+                  <p>Web app to build beautifull designed prototypes</p>
+                </div>
+                <div class="skill">
+                  <h3>Bootstrap (4.x - 5)</h3>
+                  <p>Web app to build beautifull designed prototypes</p>
+                </div>
+                <div class="skill">
+                  <h3>Git</h3>
+                  <p>
+                    Versionning tool. Usefull for team works. I use it with
+                    github to host my projects
+                  </p>
+                </div>
+              </div>
+              <h2>What i'm learning to use</h2>
+              <div class="skill-progress">
+                <div class="in-progress">
+                  <div class="skill-progress__in-progress">
+                    <h3>Docker</h3>
+                    <p>
+                      Docker takes away repetitive, mundane configuration tasks
+                      and is used throughout the development lifecycle for fast,
+                      easy and portable application development - desktop and
+                      cloud.
+                    </p>
+                    <div class="progress"></div>
+                  </div>
+                  <div class="skill-progress__in-progress">
+                    <h3>Angular</h3>
+                    <p>
+                      Angular is an application design framework and development
+                      platform for creating efficient and sophisticated
+                      single-page apps.
+                    </p>
+                    <div class="progress"></div>
+                  </div>
+                  <div class="skill-progress__in-progress">
+                    <h3>Symfony</h3>
+                    <p>
+                      Angular is an application design framework and development
+                      platform for creating efficient and sophisticated
+                      single-page apps.
+                    </p>
+                    <div class="progress"></div>
+                  </div>
+                </div>
+                <div class="skill-progress-futur">
+                  <div class="skill-progress__next" id="node">
+                    <h3>Node.js</h3>
+                    <p>
+                      Open source Back-end environment. It allows to use the
+                      disk system in an asynchronous and non-blocking way.
+                    </p>
+                  </div>
+                  <div class="skill-progress__next" id="flutter">
+                    <h3>Flutter</h3>
+                    <p>
+                      Framework for building cross-platform mobile applications.
+                      It uses the Dart programming language created by Google.
+                    </p>
+                  </div>
+                  <div class="skill-progress__next" id="svelte">
+                    <h3>Svelte.js</h3>
+                    <p>
+                      Svelte is a new approach to building user interfaces.
+                      Whereas traditional frameworks like React and Vue do the
+                      bulk of their work in the browser, Svelte shifts that work
+                      into a compile step that happens when you build your app.
+                    </p>
+                  </div>
+                  <div class="skill-progress__next" id="react">
+                    <h3>React.js</h3>
+                    <p>
+                      The most used Front-end framework today. It was created by
+                      Facebook.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class="right who">
+          <section class="presentation">
+            <div class="container">
+              <img class="home__intro-bg-face" src="./img/blueface.svg" />
+              <div class="col-12 presentation-description">
+                <h2>Un mot... Apprendre.</h2>
+                <p><strong>Apprendre</strong>... J'ai longtemps pensé que mon envie de réaliser une carrière dans le développement web venait simplement de mon attrait pour les nouvelles technologies ainsi que pour l'aspect créatif que représente la programmation informatique et bla et bla et bla. C'est une réponse, certes honnête, mais bien trop vague et partielle que je donnais auparavant à la question : <span style="font-style:italic;">Pourquoi avoir choisi le dev web ?</span> Aujourd'hui, je comprends que c'est simplement le sentiment que produit l'<strong>apprentissage</strong> de nouveaux concepts et le <strong>partage</strong> de ces connaissances avec autrui qui animent mes motivations.
+                </p>
+                <a class="btn" href="./img/CV_maxime_freychet_developpeur_web.pdf" class="btn btn--download" download>Télécharger mon CV</a>
+              </div>
+            </div>
+          </section>
+          <section class="parcours">
+            <div class="container">
+              <h2>Mon parcours</h2>
+              <div class="steps">
+                <div class="step select--purple" data-aos="slide-up">
+                  <div class="step__desc">
+                    <h3>Baccalauréat scientifique</h3>
+                    <p class="step__date">2009 - 2012</p>
+                    <p class="step__location">Lycée Léonard de Vinci, Saint-Michel s/ Orge</p>
+                    <p class="step__detail">J'obtiens mon premier diplôme ! Je n'en suis pas peu fier. A cette époque je souhaite devenir ingénieur du son. Je cherche quelques école et me tourne finalement vers une license en Musicologie. La musique... Une de mes plus grandes passions. En parallèle, je découvre le développement web via des cours OpenClassRoom que je réalise pour le plaisir.</p>
+                  </div>
+                
+                </div>
+                <div class="step select--primary" data-aos="slide-up">
+                  <div class="step__desc">
+                    <h3>Licence - Musicologie</h3>
+                    <p class="step__date">2012 - 2013</p>
+                    <p class="step__location">Université Evry Val d'Essonne</p>
+                    <p class="step__detail">Ma première année à l'université ! Je découvre que la musique devra rester une passion à côté de ma vie professionnelle. Les débouchés m'inspirent peu. J'ai beaucoup de mal à m'imaginer continuer mes études dans ce domaine. Je délaisse très vite les cours pour me consacrer à mon job alimentaire, à mes projets musicaux et à ma réflexion sur mes attentes professionnelles.</p>
+                  </div>
+                
+                </div>
+                <div class="step" data-aos="slide-up">
+                  <div class="step__desc">
+                    <h3>BTS Communication</h3>
+                    <p class="step__date">2013 - 2015</p>
+                    <p class="step__location">Lycée Léonard de Vinci, Saint-Michel s/ Orge</p>
+                    <p class="step__detail">J'ai une idée un peu plus précise de ce que je souhaites faire. J'aime être créatif et m'organiser pour réaliser des projets. J'apprends beaucoup sur moi-même pendant deux années d'études au cours desquelles je découvre le vaste monde de la communication et ses différents aspects. J'obtiens mon diplôme en juillet 2015 et décide de revenir à l'université pour y réaliser une licence en Art du spectacle.</p>
+                  </div>
+                
+                </div>
+                <div class="step select--green" data-aos="slide-up">
+                  <div class="step__desc">
+                    <h3>Licence - Art du spectacle</h3>
+                    <p class="step__date">2015 - 2016</p>
+                    <p class="step__location">Université Evry du Val d'Essonne</p>
+                    <p class="step__detail">Me revoilà à l'université. Etrangement, le même scénario que pour la licence musicologie se répète. J'avais envisagé me spécialiser dans le domaine du spectacle pour exercer la communication en son sein. Je redécouvre que la musique, c'est une chose que je fais à côté de ma vie professionnelle. Je délaisse encore assez rapidement les cours pour mon job alimentaire et réfléchir à mes attentes professionnelles.</p>
+                  </div>
+                
+                </div>
+                <div class="step select--purple" data-aos="slide-up">
+                  <div class="step__desc">
+                    <h3>Chargée de communication</h3>
+                    <p class="step__date">2016 - 2017</p>
+                    <p class="step__location">Association de lutte contre les préjugés</p>
+                    <p class="step__detail">Mon premier emploi en communication ! Je passe une année à travailler dans le domaine associatif pour une association de lutte contre les préjugés. Une expérience des plus enrichissantes où j'ai l'occasion de participer à la gestion de nombreux événements ainsi qu'à la création de supports de communication divers. Je cherche cependant à élargir mes horizons. Je décide de reprendre mes études pour réaliser une licence professionnelles afin de me spécialiser dans la réalisation web et la communication digitale. Direction Saint-Etienne !</p>
+                  </div>
+                
+                </div>
+                <div class="step" data-aos="slide-up">
+                  <div class="step__desc">
+                    <h3>Licence professionnelle ATII</h3>
+                    <p class="step__date">2017 - 2018</p>
+                    <p class="step__location">IUT de Saint-Etienne / Imprimerie Infab à Saint-Galmier</p>
+                    <p class="step__detail">Je découvre enfin le web ! Je réalise une année d'apprentissage aux côtés de l'imprimerie Infab où j'ai l'occasion de créer entièrement une identité visuelle, un site web institutionnel (wordpress), un site e-commerce (shopify) ! Je participe aussi activement à la gestion des commandes clients (devis, facturation) ainsi qu'à la réalisation des visuels PAO en vue de leur fabrication. A l'IUT, je me familiarise avec HTML / CSS, PHP et mySQL pour le back-end. J'apprends à me servir du CMS Wordpress comme un outil puissant pour réaliser des sites clef en main rapidement.</p>
+                  </div>
+                
+                </div>
+                <div class="step" data-aos="slide-up">
+                  <div class="step__desc">
+                    <h3>Responsable TIC</h3>
+                    <p class="step__date">2018 - 2019</p>
+                    <p class="step__location">Imprimerie Infab à Saint-Galmier</p>
+                    <p class="step__detail">Je continue mon expérience au sein d'Infab. Je  participe à différents projets et continue de réaliser la maintenance des sites que j'ai créé pour l'entreprise et lui trouve de nouveaux outils TIC pour son organisation. Après deux ans d'expérience en son sein, la santé économique de celle-ci se dégrade pour des raisons dont je n'ai pas la maîtrise. Un licenciement économique est organisé, je quitte l'équipe à contrecoeur mais avec d'excellent souvenirs à jamais gravés dans ma mémoire.</p>
+                  </div>
+                
+                </div>
+                <div class="step" data-aos="slide-up">
+                  <div class="step__desc">
+                    <h3>Direction le métier de développeur web</h3>
+                    <p class="step__date">2019 - 2021</p>
+                    <p class="step__location">A la maison / Human Booster / Dyma.fr</p>
+                    <p class="step__detail">Je deviens demandeur d'emploi... Je remet alors tout en question et passe par différentes phases d'introspection. Je me rend compte que la licence ATII n'était qu'un avant goût de ce que le web a à m'offrir. Je commence à me former en autodidacte et cherche un contrat en alternance pour faire mes premières armes en tant que développeur web. Ça ne fonctionne pas. Je tombe puis me relève et réussi à me faire accepter en formation de développeur web et web mobile au sein de Human Booster. Ça y est ! La machine est lancé ! Je serai développeur web.</p>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="now">
+            <div class="container">
+              <div class="col-12 now-description">
+                <h2>Et maintenant ?</h2>
+                <p>Je recherche un stage du 22 septembre au 22 novembre 2021 (et plus si affinité) afin de valider mon diplôme et enfin démarrer ma carrière dans le métier passionant qu'est le développement web. Mon profil vous intéresse ? Vous aimeriez travailler avec moi ? Me parler d'un projet ?</p>
+                <a class='btn'>Contactez-moi</a>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class="back realisation" >
+          
+            <div class="projects">
+              
+              <div class="container">
+                <h2>Mes derniers projets</h2>
+              </div>
+              <div class="container">
+                <div class="project">
+                  <h3>Centre Auto Cas</h3>
+                  <ul>
+                    <li>Angular</li>
+                    <li>Scss</li>
+                    <li>Symfony</li>
+                    <li>MySql</li>
+                    <li>POO</li>
+                  </ul>
+                  <div class="picture"><img class="project-img"src="./img/centre-auto-cas.png" alt=""></div>
+                  <p>Projets en cours de réalisation. L'objectif est de créer une plate-forme permettant à des professionnels de l'automobile de mettre en ligne et de gérer des annonces de voitures d'occasion.</p>
+                  <div class="btn-group">
+                    <a target="_blank" href="https://centre-auto-cas.vercel.app/" class="btn">Voir le projet</a>
+                    <a target="_blank" href="https://github.com/maxfrecht/centre-auto-cas" class="btn">Voir sur github</a>
+                  </div>
+                </div>
+                <div class="project">
+                  <h3>Composant personnalisation T-shirt</h3>
+                  <ul>
+                    <li>JavaScript Vanilla</li>
+                    <li>Html / CSS</li>
+                  </ul>
+                  <div class="picture"><img class="project-img"src="./img/t-shirt-js.png" alt=""></div>
+                  <p>Développement d'un composant permettant de personnaliser un t-shirt en temps réel. Au programme : Manipulation du dom, gestion de formulaires, gestion d'erreurs.</p>
+                  <div class="btn-group">
+                    <a target="_blank" href="https://centre-auto-cas.vercel.app/" class="btn">Voir le projet</a>
+                    <a target="_blank" href="https://github.com/maxfrecht/centre-auto-cas" class="btn">Voir sur github</a>
+                  </div>
+                </div>
+                <div class="project">
+                  <h3>Blog</h3>
+                  <ul>
+                    <li>JavaScript Vanilla</li>
+                    <li>SCSS</li>
+                    <li>Webpack</li>
+                  </ul>
+                  <div class="picture"><img class="project-img"src="./img/blog-js.png" alt=""></div>
+                  <p>Développement d'un blog en JavaScript Vanilla. Au programme : Manipulation du Dom, gestion des formulaires, gestion d'erreurs, requêtes fetch, AJAX. </p>
+                  <div class="btn-group">
+                    <a target="_blank" href="http://blog-javascript-git-master.maxfrecht.vercel.app/" class="btn">Voir le projet</a>
+                    <a target="_blank" href="https://github.com/maxfrecht/blog-javascript" class="btn">Voir sur github</a>
+                  </div>
+                </div>
+                <div class="project">
+                  <h3>Composant diaporama</h3>
+                  <ul>
+                    <li>JavaScript Vanilla</li>
+                    <li>Html / CSS</li>
+                  </ul>
+                  <div class="picture"><img class="project-img"src="./img/diaporama.png" alt=""></div>
+                  <p>Développement d'un composant diaporama en JavaScript Vanilla. Au programme : Manipulation du DOM, AJAX, animations</p>
+                  <div class="btn-group">
+                    <a target="_blank" href="https://diaporama-js.vercel.app/" class="btn">Voir le projet</a>
+                    <a target="_blank" href="https://github.com/maxfrecht/diaporama-js" class="btn">Voir sur github</a>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+        </section>
+      
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
