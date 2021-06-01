@@ -746,6 +746,14 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+
+    @include mq(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(small) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .skill {
@@ -1120,8 +1128,7 @@ main {
   .parcours {
     .steps {
       position: relative;
-      display: flex;
-      flex-direction: column;
+      display: grid;
       gap: 7.5rem;
 
       &:after {
@@ -1339,9 +1346,7 @@ main {
   }
 
   .project {
-    flex: 47%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 2rem;
     background: #fff;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
@@ -1382,7 +1387,10 @@ main {
       transition: background-position 0.25s ease-in-out, border 0.2s ease;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+
+      & + a {
+        margin-left: 0.5rem;
+      }
 
       @include mq(small) {
         // margin-top: 1rem;
@@ -1507,10 +1515,12 @@ main {
     }
 
     ul {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
       gap: 1rem;
-      padding-left: 2rem;
+      padding: 0 2rem;
+      text-align: center;
+      align-items: center;
 
       li {
         padding: 0.5rem 1rem;
