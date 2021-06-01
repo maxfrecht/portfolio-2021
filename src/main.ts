@@ -1,13 +1,7 @@
 import "./styles/style.scss";
 import { toggleMenu } from "./ts/burger-menu";
 import { loadingAnimation } from "./ts/loading-animation";
-import {
-  addListenersOnLearningDiv,
-  closeContactOnCLickOutside,
-  directNav,
-  navTo,
-  showContact,
-} from "./ts/navigation";
+import { addListenersOnLearningDiv, navTo, showContact } from "./ts/navigation";
 import { parralaxCircle } from "./ts/parralax";
 
 const WhoNavLinkElement: HTMLElement = document.querySelector(
