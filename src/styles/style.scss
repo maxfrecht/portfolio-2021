@@ -457,6 +457,7 @@ main {
 
   .right {
     transform: rotateY(90deg) translateX(100vw) scale(0);
+    opacity: 0;
   }
 
   .front {
@@ -465,6 +466,7 @@ main {
 
   .back {
     transform: rotateY(180deg) translateX(0) scale(0);
+    opacity: 0;
   }
 }
 

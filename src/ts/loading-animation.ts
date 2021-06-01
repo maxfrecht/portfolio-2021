@@ -6,6 +6,7 @@ import { directNav } from "./navigation";
  */
 export function loadingAnimation() {
   window.onload = () => {
+    document.body.style.opacity = "1";
     if (location.hash === "#home") {
       directNav(0, 0, "100vw", 0);
     } else if (location.hash === "#who") {
@@ -55,7 +56,7 @@ export function loadingAnimation() {
           introBox.style.opacity = "0";
           main!.style.display = "block";
           nav!.style.display = "flex";
-          contact!.style.display='block';
+          contact!.style.display = "block";
         }, 2100);
 
         setTimeout(() => {
@@ -66,7 +67,5 @@ export function loadingAnimation() {
       },
       { once: true }
     );
-
-    
   }
 }
