@@ -1378,6 +1378,12 @@ main {
       align-items: center;
       gap: 0.5rem;
 
+      @include mq(small) {
+        // margin-top: 1rem;
+        max-width: 11rem;
+        padding: 0.5rem 1rem;
+      }
+
       &:nth-of-type(2) {
         &:before {
           content: url("../img/Orion_github.svg");
@@ -1488,6 +1494,10 @@ main {
     p {
       padding: 0 2rem;
       margin-bottom: 8rem;
+
+      @include mq(small) {
+        margin-bottom: 10rem;
+      }
     }
 
     ul {
