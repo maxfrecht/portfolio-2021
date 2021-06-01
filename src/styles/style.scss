@@ -743,9 +743,9 @@ main {
 */
 .home__skills {
   .skills {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    flex-wrap: wrap;
   }
 
   .skill {
@@ -1108,10 +1108,8 @@ main {
   .now .container {
     min-height: 35rem;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    display: grid;
+    place-items: center;
     gap: 2rem;
     margin-bottom: 10rem;
 
@@ -1311,10 +1309,18 @@ main {
       padding: 0;
       background: transparent;
       justify-content: center;
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 5rem;
       min-height: 0;
+
+      &:nth-of-type(1) {
+        display: flex;
+      }
+
+      @include mq(large) {
+        grid-template-columns: repeat(1, 1fr);
+      }
 
       h2 {
         width: 100%;
