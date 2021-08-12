@@ -218,7 +218,7 @@ nav {
     span {
       font-weight: 500;
       text-transform: uppercase;
-      color: var(--purple);
+      color: var(--text);
       margin-left: 0.8rem;
     }
   }
@@ -559,9 +559,9 @@ main {
     }
 
     .btn {
-      color: var(--text-light);
+      color: var(--text);
       padding: 2rem 3rem;
-      background: var(--purple);
+      background: var(--purple-light);
       border-radius: 0.3rem;
       transition: padding 0.3s ease-in-out;
       position: relative;
