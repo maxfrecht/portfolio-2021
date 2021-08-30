@@ -1,0 +1,104 @@
+@use '../media-queries' as *;
+.onload-intro {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-out 0.3s ease-in-out forwards;
+  animation-delay: 3000ms;
+  transition: opacity 0.1s ease-in-out;
+
+  h2 {
+    color: var(--text);
+    text-transform: uppercase;
+    font-size: 7rem;
+    position: relative;
+    font-weight: 300;
+
+    @include mq(medium) {
+      font-size: 4.5rem;
+    }
+
+    span {
+      transform: translateY(-100vh);
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 50%;
+        background: black;
+        opacity: 0.3;
+        filter: blur(40px);
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        z-index: -1;
+        transform: translateX(-50%);
+        box-shadow: 0 5px 80px 0px rgba($color: #000000, $alpha: 1);
+      }
+    }
+
+    span + span {
+      margin-left: 2rem;
+    }
+
+    span:nth-child(1) {
+      animation: onload-title 1.2s ease-in-out forwards;
+      font-weight: 400;
+      font-size: 6rem;
+
+      @include mq(medium) {
+        font-size: 3.5rem;
+      }
+
+      &:after {
+        animation: onload-shadow 500ms ease-in-out forwards;
+      }
+    }
+    span:nth-child(2) {
+      animation: onload-title 1.2s ease-in-out forwards;
+      animation-delay: 300ms;
+      font-size: 5rem;
+      @include mq(medium) {
+        font-size: 2.5rem;
+      }
+
+      &:after {
+        animation: onload-shadow 500ms ease-in-out forwards;
+        animation-delay: 300ms;
+      }
+    }
+    span:nth-child(3) {
+      animation: onload-title 1.2s ease-in-out forwards;
+      animation-delay: 600ms;
+      font-size: 5rem;
+      @include mq(medium) {
+        font-size: 2.5rem;
+      }
+
+      &:after {
+        animation: onload-shadow 500ms ease-in-out forwards;
+        animation-delay: 600ms;
+      }
+    }
+    span:nth-child(4) {
+      animation: onload-title 1.2s ease-in-out forwards;
+      animation-delay: 900ms;
+      font-weight: 700;
+      // color: var(--purple);
+      &:after {
+        animation: onload-shadow 500ms ease-in-out forwards;
+        animation-delay: 900ms;
+      }
+    }
+  }
+}

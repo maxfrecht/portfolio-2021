@@ -1,0 +1,79 @@
+.contact {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  bottom: 12rem;
+  height: fit-content;
+  background: var(--text);
+  border-right: 0.1rem solid #ccc;
+  z-index: 200;
+  transform: translate(100%, -50%);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0.1rem 0 0.3rem rgba(#f1f1f1, 0.5);
+  color: var(--text-light);
+  border-radius: 0.5rem 0 0 0.5rem;
+
+  .content {
+    padding: 2rem;
+
+    img:not(.icon) {
+      max-width: 10rem;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      // border: 0.2rem solid var(--secondary);
+      box-shadow: 0 0 0 0.25rem var(--secondary);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    ul {
+      position: relative;
+      margin-top: 2rem;
+      text-align: center;
+      padding-top: 2rem;
+
+      &:before {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        content: "";
+        height: 0.1rem;
+        width: 100%;
+        background: var(--text-light);
+        opacity: 0.25;
+      }
+
+      & li a:not(#mail) {
+        text-transform: capitalize;
+        display: flex;
+        justify-content: center;
+
+        img {
+          max-width: 2rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    li + li {
+      margin-top: 2rem;
+    }
+
+    button {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      border: 0;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-light);
+    }
+
+    a {
+      color: var(--text-light);
+      text-align: center;
+    }
+  }
+}

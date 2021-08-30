@@ -1,0 +1,89 @@
+@use '../media-queries' as *;
+
+main {
+  perspective: 200vw;
+  min-width: 100vw;
+  min-height: 100vh;
+  animation: showUp 1s ease forwards;
+  transform: translateX(-200vh);
+
+  .cube {
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    opacity: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .cube > section {
+    position: absolute;
+    min-width: 100vw;
+    min-height: 100vh;
+    transition: transform 0.8s ease-in-out, opacity 200ms ease-in-out;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+
+    @include mq(small) {
+      transform-origin: center top;
+    }
+
+    & > .container {
+      // margin-top: 90px;
+      padding: 2rem;
+
+      p {
+        line-height: 3rem;
+      }
+    }
+  }
+
+  section > .container > h2 {
+    position: relative;
+    font-size: 3.5rem;
+    margin: 4rem 0;
+    font-weight: 400;
+    text-align: center;
+    padding: 2.5rem 0;
+    font-style: italic;
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-weight: 300;
+
+    @include mq(small) {
+      font-size: 2.5rem;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 15rem;
+      height: 100%;
+      left: 50%;
+      border: 1px solid var(--text);
+      border-left: none;
+      border-right: none;
+      transform: translateX(-50%);
+      opacity: 0.5;
+    }
+
+    &:before {
+      top: 0;
+    }
+  }
+
+  .right {
+    transform: rotateY(90deg) translateX(100vw) scale(0);
+    opacity: 0;
+  }
+
+  .front {
+    transform: rotateY(0) translateX(0) scale(1);
+  }
+
+  .back {
+    transform: rotateY(180deg) translateX(0) scale(0);
+    opacity: 0;
+  }
+}

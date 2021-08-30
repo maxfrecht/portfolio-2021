@@ -1,0 +1,135 @@
+@use '../media-queries' as *;
+
+.home__skills {
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @include mq(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .skill {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0.2rem rgba(#2a133d, 0.3);
+    transition: background 400ms ease-in-out;
+    background: var(--purple);
+    min-height: 16rem;
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include mq(tablet) {
+      flex: 40%;
+    }
+    @include mq(small) {
+      flex: 100%;
+    }
+
+    h3,
+    p {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:before {
+      position: absolute;
+      content: url("../img/sass.png");
+      filter: grayscale(1) brightness(100);
+      padding: 1rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(var(--skill-scale, 0.8));
+      transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+    }
+
+    &:nth-of-type(2),
+    &:nth-of-type(8) {
+      background: var(--primary);
+    }
+    &:nth-of-type(3) {
+      background: var(--secondary);
+
+      &:hover:before {
+        transform: translate(-50%, -50%) scale(0.4);
+      }
+    }
+    &:nth-of-type(4),
+    &:nth-of-type(6) {
+      background: var(--green);
+    }
+    &:nth-of-type(5) {
+      background: var(--secondary);
+    }
+
+    &:nth-of-type(2):before {
+      content: url("../img/512px-Typescript_logo_2020 (1).png");
+      --skill-scale: 0.45;
+    }
+    &:nth-of-type(3):before {
+      content: url("../img/mysql.png");
+      --skill-scale: 0.18;
+    }
+    &:nth-of-type(4):before {
+      content: url("../img/logo-webpack.png");
+      --skill-scale: 0.7;
+    }
+    &:nth-of-type(5):before {
+      content: url("../img/php.png");
+      --skill-scale: 0.7;
+    }
+    &:nth-of-type(6):before {
+      content: url("../img/logo-figma.png");
+      --skill-scale: 0.3;
+    }
+    &:nth-of-type(7):before {
+      content: url("../img/bootstrap.png");
+      --skill-scale: 0.5;
+    }
+    &:nth-of-type(8):before {
+      content: url("../img/Git-Icon.png");
+      --skill-scale: 0.5;
+    }
+
+    &:hover {
+      background: #fff;
+
+      h3,
+      p {
+        opacity: 1;
+      }
+
+      &:before {
+        transform: translate(-50%, -50%) scale(2);
+        filter: grayscale(1);
+        opacity: 0.06;
+      }
+    }
+
+    p {
+      padding: 1rem 0;
+      font-weight: 300;
+      line-height: 2.5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 0;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+}

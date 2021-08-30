@@ -1,0 +1,228 @@
+@use '../media-queries' as *;
+
+.skill-progress {
+  display: grid;
+  grid:
+    "inprogress next next" auto
+    / 5fr 4fr 4fr;
+  grid-gap: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 20rem;
+
+  @include mq(medium) {
+    grid:
+      "inprogress" auto
+      "next" auto
+      / auto;
+  }
+  .in-progress {
+    grid-area: inprogress;
+  }
+  .skill-progress-futur {
+    grid-area: next;
+  }
+
+  &__in-progress:nth-of-type(1) {
+    outline-color: var(--purple);
+    border-color: var(--purple);
+    background: rgba(#a44fe9, 0.25);
+    ::selection {
+      background: var(--purple);
+      color: #f1f1f1;
+    }
+    .progress:after {
+      width: 40%;
+      background: var(--purple);
+    }
+    &:after {
+      content: url(../img/docker.png);
+    }
+  }
+  &__in-progress:nth-of-type(2) {
+    outline-color: var(--green);
+    border-color: var(--green);
+    background: rgba(#00c982, 0.25);
+    ::selection {
+      background: var(--green);
+    }
+    .progress:after {
+      width: 60%;
+      background: var(--green);
+    }
+    &:after {
+      content: url(../img/angular.png);
+    }
+  }
+  &__in-progress:nth-of-type(3) {
+    outline-color: var(--secondary);
+    border-color: var(--secondary);
+    background: rgba(#eb9a07, 0.25);
+    .progress:after {
+      width: 15%;
+      background: var(--secondary);
+    }
+    &:after {
+      content: url(../img/symfony-logo.png);
+    }
+  }
+  &__next#node {
+    outline-color: var(--primary);
+    border-color: var(--primary);
+    background: rgba(#009b9e, 0.25);
+    ::selection {
+      background: var(--primary);
+      color: #f1f1f1;
+    }
+    &:after {
+      content: url(../img/node.png);
+    }
+  }
+  &__next#flutter {
+    outline-color: var(--secondary);
+    border-color: var(--secondary);
+    background: rgba(#eb9a07, 0.25);
+    &:after {
+      content: url(../img/flutter_logo.png);
+    }
+  }
+  &__next#svelte {
+    outline-color: var(--purple);
+    border-color: var(--purple);
+    background: rgba(#a44fe9, 0.25);
+    ::selection {
+      background: var(--purple);
+      color: #f1f1f1;
+    }
+    &:after {
+      content: url(../img/svelte.png);
+    }
+  }
+  &__next#react {
+    outline-color: var(--primary);
+    border-color: var(--primary);
+    background: rgba(#009b9e, 0.25);
+    ::selection {
+      background: var(--primary);
+      color: #f1f1f1;
+    }
+    &:after {
+      content: url(../img/react.png);
+    }
+  }
+  &__in-progress + &__in-progress,
+  .skill-progress__next + .skill-progress__next {
+    margin-top: 1.5rem;
+  }
+
+  &__in-progress,
+  .skill-progress__next {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    transition: outline-offset 0.25s;
+    outline-style: solid;
+    outline-width: 0rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid;
+
+    &:after {
+      opacity: 0.04;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: scale(var(--learn-scale, 0.8))
+      translate(var(--learn-tx, -50%), var(--learn-ty, -50%));
+      filter: grayscale(1) brightness(10) contrast(1%);
+    }
+
+    h3 {
+      font-size: 2.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:after {
+        content: "";
+        width: 0.8rem;
+        height: 0.8rem;
+        border: 1px solid rgba($color: #2a133d, $alpha: 0.5);
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg) translate(-50%, -50%);
+        transition: transform 0.3s ease;
+      }
+    }
+
+    h3,
+    p {
+      font-weight: 300;
+      z-index: 10;
+    }
+
+    .progress {
+      width: 100%;
+      height: 1.5rem;
+      background: rgba(#f1f1f1, 0.8);
+      border-radius: 0.5rem;
+      position: relative;
+      box-shadow: 0 0 0.2rem rgba(#2a133d, 0.4) inset;
+      z-index: 10;
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 0.5rem 0 0 0.5rem;
+        opacity: 0.47;
+        animation: progressbar 7s ease;
+      }
+    }
+
+    &.show {
+      outline-offset: -0.6rem;
+      outline-width: 0.15rem;
+      justify-content: start;
+      cursor: auto;
+      border: 0;
+
+      h3:after {
+        transform: rotate(225deg) translate(0, 0);
+      }
+
+      p {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+  }
+  &__in-progress.show {
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+  .skill-progress__next h3 {
+    margin-bottom: 0;
+  }
+
+  .skill-progress__next.show h3 {
+    margin-bottom: 0.5rem;
+  }
+  .skill-progress__next:after {
+    --learn-scale: 0.7;
+    --learn-ty: -70%;
+  }
+
+  p {
+    line-height: 2.4rem;
+    max-height: 0px;
+    opacity: 0;
+    transform: translateX(-4rem);
+    transition: max-height 0.25s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
+}

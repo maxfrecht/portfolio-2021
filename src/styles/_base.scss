@@ -34,3 +34,69 @@ img {
 p {
   line-height: 2.5rem;
 }
+
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: var(--text) #f1f1f1; /* scroll thumb and track */
+}
+
+html {
+  min-height: 100vh;
+}
+
+::-moz-selection {
+  color: var(--text);
+  background: var(--secondary);
+}
+
+::selection {
+  color: var(--text);
+  background: var(--secondary);
+}
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--text-light);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 2rem;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  background: #f1f1f1;
+  transition: background-image 2s ease;
+  color: var(--text);
+
+  &:before,
+  &:after {
+    content: "";
+    position: fixed;
+    width: 50rem;
+    height: 50rem;
+    opacity: 0.08;
+    border-radius: 50%;
+  }
+
+  &:before {
+    background: var(--purple);
+    transform: translate(-30%, 40%);
+  }
+
+  &:after {
+    background: var(--primary);
+    transform: translate(50%, -30%);
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 40rem;
+    height: 40rem;
+  }
+}
